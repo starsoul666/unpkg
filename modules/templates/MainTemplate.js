@@ -39,7 +39,8 @@ export default function MainTemplate({
       favicon && e('link', { rel: 'shortcut icon', href: favicon }),
       e('title', null, title),
       x(promiseShim),
-      x(fetchShim)
+      x(fetchShim),
+      data && x(`window.__DATA__ = ${encodeJSONForScript(data)}`)
     ),
     e(
       'body',
