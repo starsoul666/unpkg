@@ -9,7 +9,9 @@
     "serve": "cross-env NODE_ENV=production PORT=8090 node server.js",
     "test": "jest",
     "watch": "rollup -c -w",
-    "postinstall": "yarn run build"
+    "postinstall": "yarn run build",
+    "start:pm2": "pm2 start pm2.config.js",
+    "stop:pm2": "pm2 stop unpkg"
   },
   "dependencies": {
     "@babel/core": "^7.2.2",
